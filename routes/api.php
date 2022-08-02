@@ -26,6 +26,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Ruta para el login por medio de una API
 Route::post('login', [App\Http\Controllers\Api\LoginController::class, 'login']);
 
+//Ruta para el registro por medio de una API
+Route::post('registro', [App\Http\Controllers\Api\RegistroController::class, 'registro']);
+
 //Rutas para hacer peticiones a la API de Signos Vitales
 Route::get('/signosvitales', [SignosVitalesController::class, 'index']);
 Route::post('/signosvitales', [SignosVitalesController::class, 'store']);

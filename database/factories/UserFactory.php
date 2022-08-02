@@ -35,6 +35,8 @@ class UserFactory extends Factory
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
             'fechaNacimiento' => fake()->date(),
             'edad' => fake()->numberBetween(18, 65),
+            //Generar una curp aleatoria
+            'curp' => strtoupper(fake()->asciify('##############')),
             'rol' => fake()->numberBetween(1, 3),
             'remember_token' => Str::random(10),
         ];

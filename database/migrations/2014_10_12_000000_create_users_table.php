@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('password');
             $table->date('fechaNacimiento');
             $table->integer('edad');
+            $table->string('curp', 18);
             $table->enum('rol', ['Paciente', 'Doctor(a)', 'Asistente', 'Enfermero(a)']);
             $table->rememberToken();
             $table->timestamps();
